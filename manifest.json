@@ -9,17 +9,7 @@
   "food"
 ],
     "start_url": "https://receitasdeliciosasapi.netlify.app/",
-    "display": "standalone",
-    "icons": [
-    {
-      "src": "img/logorecepies.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "img/logorecepies.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
-}
+    "display": "standalone"
+}   
+    
+   
