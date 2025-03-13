@@ -1,27 +1,25 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path');  // Importando o módulo path
+const path = require('path');  
 
 const app = express();
 const port = 4000;
 
-// Habilita o CORS corretamente para permitir acesso do frontend
+
 app.use(cors({
-    origin: '*',  // Permite qualquer origem acessar a API
-    methods: ['GET']  // Permite apenas requisições GET
+    origin: '*',  
+    methods: ['GET']  
 }));
 
-// Serve arquivos estáticos da pasta 'img'
 app.use('/img', express.static(path.join(__dirname, 'img')));
 
 
-// Dados estáticos de receitas
 const receitas = [
     {
         id: 1,
         nome: 'Lasanha',
         descricao: 'Uma deliciosa lasanha com molho de tomate e queijo.',
-        imagem: '/img/lasanha.jpg'  // O caminho para a imagem agora será acessível via '/img'
+        imagem: '/img/lasanha.jpg'  
     },
     {
         id: 2,
@@ -85,12 +83,12 @@ const receitas = [
     },
 ];
 
-// Rota GET para obter as receitas
+
 app.get('/api/receitas', (req, res) => {
     res.json(receitas);
 });
 
-// Inicia o servidor
+
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
