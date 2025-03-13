@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const API_URL = 'http://localhost:4000/api/receitas';
+    const API_URL = 'https://localhost:4000/api/receitas';
     let receitas = []; 
 
     fetch(API_URL)
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const listItem = document.createElement('li');
             listItem.innerHTML = `
                 <a href="${receita.link}" target="_blank">
-                    <img src="http://localhost:4000${receita.imagem}" alt="${receita.nome}">
+                    <img src="https://localhost:4000${receita.imagem}" alt="${receita.nome}">
                 </a>
                 <h2>${receita.nome}</h2>
                 <p>${receita.descricao}</p>
