@@ -54,10 +54,12 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        receitas.forEach(receita => {
+   receitas.forEach(receita => {
             const listItem = document.createElement('li');
             listItem.innerHTML = `
-                <img src="http://localhost:4000${receita.imagem}" alt="${receita.nome}">
+                <a href="${receita.link}" target="_blank">
+                    <img src="http://localhost:4000${receita.imagem}" alt="${receita.nome}">
+                </a>
                 <h2>${receita.nome}</h2>
                 <p>${receita.descricao}</p>
             `;
