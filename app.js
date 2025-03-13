@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const API_URL = 'http://localhost:4000/api/receitas';
-    let receitas = []; // Armazena a lista de receitas
+    let receitas = []; 
 
-    // Busca as receitas do backend
     fetch(API_URL)
         .then(response => response.json())
         .then(data => {
@@ -15,24 +14,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const searchInput = document.getElementById('search-input');
 
-    // Evento de busca ao digitar
+
     searchInput.addEventListener('input', function () {
         filterAndDisplay();
     });
 
-    // Evento de busca ao pressionar Enter
+  
     searchInput.addEventListener('keypress', function (event) {
         if (event.key === 'Enter') {
-            event.preventDefault(); // Impede o comportamento padrão do Enter
+            event.preventDefault();
             filterAndDisplay();
         }
     });
 
-    // Função para filtrar receitas e exibir
+
     function filterAndDisplay() {
         const query = searchInput.value.trim().toLowerCase();
 
-        // Se a barra de pesquisa estiver vazia, mostra todas as receitas
+        
         if (query === '') {
             displayRecipes(receitas);
             return;
@@ -45,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         displayRecipes(filteredRecipes);
     }
 
-    // Função para exibir receitas na tela
+    
     function displayRecipes(receitas) {
         const recipesList = document.getElementById('recipes-list');
         recipesList.innerHTML = '';
