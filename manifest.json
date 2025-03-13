@@ -1,0 +1,25 @@
+{
+    "name": "ReceitasDeliciosas",
+    "theme_color": "#d35400",
+    "background_color": "#fff3e6",
+    "short_name": "DeliReceita",
+    "id": "ReceitasDeliciosas",
+    "description": "Pesquise sua receita favorita de modo rápido e fácil!",
+    "categories": [
+  "food"
+],
+    "start_url": "https://receitasdeliciosasapi.netlify.app/",
+    "display": "standalone",
+    "icons": [
+    {
+      "src": "img/logorecepies.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logorecepies.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
