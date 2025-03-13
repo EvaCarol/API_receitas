@@ -37,7 +37,7 @@ const receitas = [
         id: 4,
         nome: 'Carne Louca',
         descricao: 'Carne saborosa desfiada.',
-        imagem: 'carne2.jpg'
+        imagem: '/img/carne2.jpg'
     },
     {
         id: 5,
